@@ -1,26 +1,47 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --font-oswald: var(--font-oswald), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+
+  --color-bg-main: #0c0d10;
+  --color-bg-secondary: #0f1115;
+  --color-surface-card: #15171d;
+  --color-surface-card-alt: #1c1f26;
+  --color-border-subtle: #222630;
+  --color-border-muted: #2b303d;
+  --color-accent-lime: #ccff00;
+  --color-nav-active: #1a2312;
+  --color-text-primary: #ffffff;
+  --color-text-body: #e5e7eb;
+  --color-text-muted: #9ca3af;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-main: #0c0d10;
+  --bg-secondary: #0f1115;
+  --surface-card: #15171d;
+  --surface-card-alt: #1c1f26;
+  --border-subtle: #222630;
+  --border-muted: #2b303d;
+  --accent-lime: #ccff00;
+  --nav-active: #1a2312;
+  --text-primary: #ffffff;
+  --text-body: #e5e7eb;
+  --text-muted: #9ca3af;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-oswald {
+  font-family: var(--font-oswald), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
 }
