@@ -19,4 +19,4 @@ FitLog is a workout library application where users can explore workouts, view w
 - Save workouts for later.
 - Mark planned workouts as completed or pending.
 - Persist the workout plan and saved workouts using localStorage.
-- Responsive design for desktop, tablet, and mobile.
+- Responsive design for desktop, tablet and mobile.
