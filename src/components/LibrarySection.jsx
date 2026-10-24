@@ -25,8 +25,27 @@ export default function LibrarySection() {
   };
 
   useEffect(() => {
-    
-    loadWorkouts();
+    let ignore = false;
+    async function init() {
+      try {
+        const data = await getAllWorkouts();
+        if (!ignore) {
+          setWorkouts(Array.isArray(data) ? data : []);
+        }
+      } catch (err) {
+        if (!ignore) {
+          setError(err.message || "Failed to load workouts");
+        }
+      } finally {
+        if (!ignore) {
+          setLoading(false);
+        }
+      }
+    }
+    init();
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   const trimmedQuery = query.trim().toLowerCase();
