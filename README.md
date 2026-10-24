@@ -1,6 +1,6 @@
 # FitLog
 
-FitLog is a workout library application where users can explore workouts, view workout details, create a daily workout plan, and save workouts for later.
+FitLog is a workout library application where users can explore workouts, view workout details, create a daily workout plan and save workouts for later.
 
 ## Technologies Used
 
