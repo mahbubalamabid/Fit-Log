@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${oswald.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-[#0c0d10] text-[#e5e7eb] font-sans selection:bg-[#ccff00] selection:text-[#0c0d10]">
         <WorkoutProvider>
